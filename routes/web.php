@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
+Route::get('/', 'ProductsController@index');
 Route::get('/products', 'ProductsController@index');
 Route::post('/products/', 'ProductsController@store');
-// Route::get('/products/{product}/edit', 'ProductsController@edit');
-// Route::put('/products/{product}', 'ProductsController@update');
-// Route::get('/products/create', 'ProductsController@create');
+Route::get('products/{product}', 'ProductsController@show');
+Route::get('products/{product}/edit', 'ProductsController@edit');
+
