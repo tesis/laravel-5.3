@@ -23,6 +23,8 @@
 </head>
     <body>
         <div class="container">
+            @include('layouts.nav');
+            @include('flash');
             @yield('content')
         </div>
         @yield('footer')

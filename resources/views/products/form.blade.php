@@ -1,5 +1,6 @@
-<form method="POST" action="/products">
+<form method="POST" action="/products/{{$product->id or ''}}" autocomplete="off">
     {{ csrf_field() }}
+    {{ method_field($methodField) }}
     <div class="form-group">
         <label for="productName" class="control-label">Product Name</label>
         <input type="text" class="form-control" name="productName" id="productName" placeholder="Product Name" value="{{ $product->productName  or '' }}" />

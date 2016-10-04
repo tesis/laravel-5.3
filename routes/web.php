@@ -16,8 +16,12 @@
 });*/
 
 Route::get('/', 'ProductsController@index');
+
+Route::get('/products/{product}/delete', 'ProductsController@confirmDelete');
+
 Route::get('/products', 'ProductsController@index');
-Route::post('/products/', 'ProductsController@store');
+Route::post('/products', 'ProductsController@store');
 Route::get('products/{product}', 'ProductsController@show');
 Route::get('products/{product}/edit', 'ProductsController@edit');
-
+Route::put('/products/{product}', 'ProductsController@update');
+Route::delete('/products/{product}', 'ProductsController@delete');
